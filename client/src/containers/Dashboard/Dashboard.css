@@ -1,0 +1,19 @@
+.dashboard{
+  display: flex;
+  flex-direction: row;
+}
+
+.tasks{
+  background-color: white;
+  flex: 7;
+  padding: 1rem;
+}
+
+.form{
+
+  background-color: white;
+  flex: 3;
+  padding: 1rem;
+
+}
+
