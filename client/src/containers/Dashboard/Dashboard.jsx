@@ -23,6 +23,7 @@ function Dashboard() {
     console.log("after mongoose", task);
     setTasks((prevState) => [...prevState, task]);
   };
+  console.log("tasks", tasks);
   const taskForPrinting = tasks[0];
   return (
     <div className="dashboard">
