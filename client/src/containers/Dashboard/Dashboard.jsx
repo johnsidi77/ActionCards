@@ -4,9 +4,8 @@ import TaskForm from "../../components/TaskForm/TaskForm";
 import TaskList from "../../components/TaskList/TaskList.jsx";
 import {
   usePDF,
-  ReactPDF,
+  BlobProvider,
   PDFViewer,
-  PDFDownloadLink,
 } from "@react-pdf/renderer";
 import IndexCard3by5 from "../../components/IndexCard3-5/IndexCard3-5";
 import "./Dashboard.css";
@@ -34,9 +33,7 @@ function Dashboard() {
         <TaskList id="list" tasks={tasks} />
       </div>
       <div className="indexCard">
-        <PDFViewer showToolbar="true" width="300" height="200">
           <IndexCard3by5 />
-        </PDFViewer>
       </div>
 
       <div className="form">
