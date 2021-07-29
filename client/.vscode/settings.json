@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "tab.activeBackground": "#86d2f85e",
+    "sideBarSectionHeader.background": "#86d2f85e",
+    "tab.unfocusedActiveBackground": "#f0f0f0",
+    "editor.lineHighlightBackground": "#d4ebf2",
+    "activityBar.background": "#283117",
+    "titleBar.activeBackground": "#374420",
+    "titleBar.activeForeground": "#F9FBF6"
+  }
+}
