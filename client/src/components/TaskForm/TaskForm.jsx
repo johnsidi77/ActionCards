@@ -1,39 +1,52 @@
-import './TaskForm.css'
-import {useState} from 'react';
+import "./TaskForm.css";
+import { useState } from "react";
 
-function TaskForm( {createHandler}) {
-  const [task, setTask] = useState({title: '', startDate: ''});
-  
+function TaskForm({ createHandler }) {
+  const [task, setTask] = useState({ title: "", startDate: "" });
+
   const submitHandler = async (e) => {
     e.preventDefault();
     await createHandler(task);
-    setTask({title: '', startDate: ''})
+    setTask({ title: "", startDate: "" });
+  };
+
+  console.log("task", task);
+  
+  function selectTasks () {
+    
   }
-  
-  console.log('task', task)
-  
+
   return (
     <div className="form">
       <h3>Create a new task</h3>
       <form onSubmit={submitHandler}>
-        <label>TITLE</label>
+        <label>Description</label>
         <input
           required
-          onChange = {(e) => {setTask({...task, title:e.target.value})}}
-          value = {task.title}
-          type="text" /><br/>
-          
-        <label>DATE</label>
+          onChange={(e) => {
+            setTask({ ...task, title: e.target.value });
+          }}
+          value={task.title}
+          type="text"
+        />
+        <br />
+
+        <label>Start Date</label>
         <input
           required
-          onChange = {(e) => {setTask({...task, startDate:e.target.value})}}
-          value = {task.startDate}
-          type= "datetime-local" /><br/>
-          
-          <button type="submit">Create</button>  
+          onChange={(e) => {
+            setTask({ ...task, startDate: e.target.value });
+          }}
+          value={task.startDate}
+          type="datetime-local"
+        />
+        <br />
+
+        <button type="submit">Create</button>
       </form>
+      <button onClick={selectTasks}>Print tasks</button>
     </div>
-  )
+  );
 }
 
 export default TaskForm;

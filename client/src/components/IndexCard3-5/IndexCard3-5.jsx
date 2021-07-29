@@ -7,16 +7,16 @@ import {
   Document,
   StyleSheet,
 } from "@react-pdf/renderer";
-
-const IndexCard3by5 = () => (
+const IndexCard3by5 = ({ taskForPrinting }) => (
   <PDFViewer showToolbar="true" width="300" height="200">
     <Document>
       <Page size="A7" orientation="landscape">
         <Text style={styles.label}>Title: </Text>
-        <Text style={styles.body}> Lorem ipsum dolor sit amet. </Text>
+
+        <Text style={styles.body}>{taskForPrinting.title}</Text>
 
         <Text style={styles.label}>Start date: </Text>
-        <Text style={styles.body}> 2021-07-29</Text>
+        <Text style={styles.body}> {taskForPrinting.startDate}</Text>
       </Page>
     </Document>
   </PDFViewer>
