@@ -8,23 +8,40 @@ import {
   StyleSheet,
 } from "@react-pdf/renderer";
 
+function checkBoxPicks() {
+  let result = [];
+  const checkChoices = document.getElementsByClassName("printCheckbox");
+  for (let i in checkChoices) {
+    result.push(checkChoices[i].checked ? checkChoices[i].id : null);
+  }
+  console.log("result", result);
+  return result;
+}
+
+function createIndexCards() {}
+
 const IndexCard3by5 = ({ taskForPrinting }) => (
-  <PDFViewer showToolbar="true" width="500" height="400">
-    <Document>
-      <Page size="A7" orientation="landscape">
-        <Text style={styles.label}>Title: </Text>
-        {console.log("task for printing", taskForPrinting[0])}
-        {/* <Text style={styles.body}>description</Text> */}
+  <div className="indexCard">
+    <button onClick={checkBoxPicks}>Print selected tasks</button>
+    <PDFViewer showToolbar="true" width="500" height="400">
+      <Document>
+        <Page size="A7" orientation="landscape">
+          <Text style={styles.label}>Title: </Text>
+          {console.log("task for printing", taskForPrinting[0])}
+          <Text style={styles.body}>{taskForPrinting[3].title}</Text>
+          <Text style={styles.label}>Start date: </Text>
+          <Text style={styles.body}> {taskForPrinting[3].startDate}</Text>
+        </Page>
 
-        <Text style={styles.body}>{taskForPrinting[3].title}</Text>
-
-        <Text style={styles.label}>Start date: </Text>
-        <Text style={styles.body}> {taskForPrinting[3].startDate}</Text>
-
-        {/* <Text style={styles.body}> 2020</Text> */}
-      </Page>
-    </Document>
-  </PDFViewer>
+        <Page size="A7" orientation="landscape">
+          <Text style={styles.label}>Title: </Text>
+          <Text style={styles.body}>{taskForPrinting[1].title}</Text>
+          <Text style={styles.label}>Start date: </Text>
+          <Text style={styles.body}> {taskForPrinting[1].startDate}</Text>
+        </Page>
+      </Document>
+    </PDFViewer>
+  </div>
 );
 
 const styles = StyleSheet.create({

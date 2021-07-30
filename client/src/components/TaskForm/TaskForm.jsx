@@ -12,9 +12,6 @@ function TaskForm({ createHandler }) {
 
   console.log("task", task);
   
-  function selectTasks () {
-    
-  }
 
   return (
     <div className="form">
@@ -44,7 +41,6 @@ function TaskForm({ createHandler }) {
 
         <button type="submit">Create</button>
       </form>
-      <button onClick={selectTasks}>Print tasks</button>
     </div>
   );
 }
