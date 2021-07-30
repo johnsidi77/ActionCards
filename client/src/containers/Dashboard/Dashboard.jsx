@@ -24,7 +24,7 @@ function Dashboard() {
     setTasks((prevState) => [...prevState, task]);
   };
   console.log("tasks", tasks);
-  const taskForPrinting = tasks[0];
+  const taskForPrinting = tasks;
   return (
     <div className="dashboard">
       <div className="tasks">

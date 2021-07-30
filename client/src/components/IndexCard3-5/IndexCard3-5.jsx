@@ -12,7 +12,7 @@ const IndexCard3by5 = ({ taskForPrinting }) => (
     <Document>
       <Page size="A7" orientation="landscape">
         <Text style={styles.label}>Title: </Text>
-
+        {console.log("task for printing", taskForPrinting[0])}
         <Text style={styles.body}>{taskForPrinting.title}</Text>
 
         <Text style={styles.label}>Start date: </Text>
