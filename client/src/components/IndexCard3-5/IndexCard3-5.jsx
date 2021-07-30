@@ -13,14 +13,14 @@ const IndexCard3by5 = ({ taskForPrinting }) => (
       <Page size="A7" orientation="landscape">
         <Text style={styles.label}>Title: </Text>
         {console.log("task for printing", taskForPrinting[0])}
-        <Text style={styles.body}>1000</Text>
+        {/* <Text style={styles.body}>1000</Text> */}
 
-        {/* <Text style={styles.body}>{taskForPrinting[0].title}</Text> */}
+        <Text style={styles.body}>{taskForPrinting[0].title}</Text>
 
         <Text style={styles.label}>Start date: </Text>
-        {/* <Text style={styles.body}> {taskForPrinting[0].startDate}</Text> */}
+        <Text style={styles.body}> {taskForPrinting[0].startDate}</Text>
 
-        <Text style={styles.body}> 2020</Text>
+        {/* <Text style={styles.body}> 2020</Text> */}
       </Page>
     </Document>
   </PDFViewer>
