@@ -24,7 +24,7 @@ function Dashboard() {
     setTasks((prevState) => [...prevState, task]);
   };
   console.log("tasks", tasks);
-  const taskForPrinting = tasks;
+  // const taskForPrinting = tasks;
   return (
     <div className="dashboard">
       <div className="tasks">
@@ -34,7 +34,7 @@ function Dashboard() {
       <div className="form">
         <TaskForm createHandler={createHandler} />
         <div className="indexCard">
-          <IndexCard3by5 taskForPrinting={taskForPrinting} />
+          {tasks.length ? <IndexCard3by5 taskForPrinting={tasks} /> : null}
         </div>
       </div>
     </div>
