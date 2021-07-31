@@ -11,7 +11,6 @@ function TaskForm({ createHandler }) {
   };
 
   console.log("task", task);
-  
 
   return (
     <div className="form">

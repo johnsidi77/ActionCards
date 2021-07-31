@@ -34,7 +34,7 @@ function Dashboard() {
       <div className="form">
         <TaskForm createHandler={createHandler} />
         <div className="indexCard">
-          {tasks.length ? <IndexCard3by5 taskForPrinting={tasks} /> : null}
+          {tasks.length ? <IndexCard3by5 tasks={tasks} /> : null}
         </div>
       </div>
     </div>
